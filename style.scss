@@ -1,0 +1,247 @@
+$font-color: rgb(32, 32, 32);
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* container */
+
+.container {
+    height: auto;
+    width: 100vw;
+}
+
+
+/* header */
+
+.header {
+    height: 80vh;
+    width: 100vw;
+    position: relative;
+    background-image: linear-gradient(to right bottom, #f956b3, #ff549e, #ff568a, #ff5b76, #fa6265, #f8665a, #f56a50, #f16f45, #f1713b, #ef7431, #ee7725, #eb7b15);
+}
+
+
+/* header curve */
+
+.custom-shape-divider-bottom-1634063456 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 138px;
+    }
+    .shape-fill {
+        fill: #fff;
+    }
+}
+
+
+/* header-content */
+
+.header-content {
+    position: absolute;
+    top: 30%;
+    left: 16%;
+    h1 {
+        font-size: 6rem;
+        letter-spacing: 1px;
+    }
+    p {
+        font-size: 20px;
+        letter-spacing: 1px;
+        padding-top: 15px;
+        font-style: italic;
+    }
+}
+
+
+/* main-order */
+
+.main-order {
+    height: auto;
+    width: 100vw;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h2 {
+        color: $font-color;
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    form {
+        margin: 30px 0;
+        input {
+            padding: 5px 10px;
+            margin-right: 10px;
+            height: 40px;
+            width: 700px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            color: $font-color;
+            font-size: 16px;
+            letter-spacing: 1.5px;
+        }
+        button {
+            padding: 5px 20px;
+            height: 40px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 4px;
+            background-image: linear-gradient(to right bottom, #f956b3, #ff549e, #ff568a, #ff5b76, #fa6265, #f8665a, #f56a50, #f16f45, #f1713b, #ef7431, #ee7725, #eb7b15);
+        }
+    }
+}
+
+
+/* main-propositions */
+
+.main-propositions {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .proposition {
+        position: relative;
+        height: 420px;
+        width: 350px;
+        margin: 60px 50px;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #fff;
+        box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+        .food-img {
+            height: 280px;
+            width: 350px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            -webkit-box-shadow: inset 0px -100px 38px -53px rgba(255, 255, 255, 1);
+            -moz-box-shadow: inset 0px -100px 38px -53px rgba(255, 255, 255, 1);
+            box-shadow: inset 0px -100px 38px -53px rgba(255, 255, 255, 1);
+        }
+        .food-img-1 {
+            background-image: url(img/Pasta.jpeg);
+        }
+        .food-img-2 {
+            background-image: url(img/Salad.jpg);
+        }
+        .food-img-3 {
+            background-image: url(img/Steak.jpg);
+        }
+        .food-content {
+            height: 120px;
+            width: 350px;
+            overflow: hidden;
+            * {
+                color: $font-color;
+            }
+            .food-name {
+                position: absolute;
+                bottom: 20%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                h3 {
+                    font-size: 1.5rem;
+                }
+            }
+            .food-read {
+                height: 35px;
+                width: 90px;
+                border-radius: 4px;
+                background-image: linear-gradient(to right bottom, #f956b3, #ff549e, #ff568a, #ff5b76, #fa6265, #f8665a, #f56a50, #f16f45, #f1713b, #ef7431, #ee7725, #eb7b15);
+                overflow: hidden;
+                position: absolute;
+                bottom: 6%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: 0.3s ease;
+                .food-read--p {
+                    line-height: 35px;
+                    font-size: 12px;
+                    text-align: center;
+                    color: white;
+                }
+                .slide-food {
+                    position: absolute;
+                    color: white;
+                    margin-right: 15%;
+                    display: none;
+                }
+                .slide-food--name {
+                    left: 15%;
+                    top: 15%;
+                    opacity: 0;
+                    font-size: 23px;
+                }
+                .slide-food--description {
+                    left: 15%;
+                    top: 30%;
+                    width: 70%;
+                    opacity: 0;
+                    p {
+                        color: white;
+                    }
+                }
+                .slide-food--price {
+                    left: 45%;
+                    top: 83%;
+                    font-size: 23px;
+                    opacity: 0;
+                    font-weight: bold;
+                }
+            }
+            .food-read:hover {
+                animation: fill_width 0.2s forwards ease-in-out, fill_height 0.2s forwards ease-in-out 0.2s;
+                .food-read--p {
+                    display: none;
+                }
+                .slide-food--name,
+                .slide-food--price,
+                .slide-food--description {
+                    display: block;
+                    animation: add_food-content 0.3s forwards ease-out 0.45s;
+                }
+            }
+        }
+    }
+}
+
+
+/* Propositions animations */
+
+@keyframes fill_width {
+    100% {
+        left: 0;
+        width: 100%;
+        transform: translate(0, -50%);
+    }
+}
+
+@keyframes fill_height {
+    100% {
+        bottom: 0;
+        height: 100%;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes add_food-content {
+    100% {
+        opacity: 1;
+    }
+}
